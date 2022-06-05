@@ -1,0 +1,121 @@
+  .conteudo{
+      background-color: var(--azul-claro);
+      width: 960px;
+      height: 800px;
+  }
+
+strong{
+    font-weight: bold;
+    font-size: 15px!important;
+}
+
+p{
+    font-size: 15px;
+    text-align: left;
+}
+  
+.titulo-mapa{
+    margin-bottom: 0px!important;
+}
+
+.titulo-mapa h1, .titulo-mapa h5{
+    font-family: 'Inter';
+    font-style: normal;
+  }
+
+  .titulo-mapa h1{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 30px;
+    color: var(--cor-padrao);
+    margin-left: -105px;
+  }
+
+  .titulo-mapa h5{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 39px;
+    color: var(--cor-padrao);
+    padding-top: 20px;
+  }
+  
+  
+  /* Web Font */
+  * {
+    font-family: 'Titillium Web', sans-serif; 
+}
+
+/* Relative positioning*/
+#image-map {
+    position: relative;
+    margin: 0px auto 20px auto;
+}
+
+/* Hide the original tooltips contents */
+.pin {
+    display: none;
+}
+
+/* Begin styling the tooltips and pins */
+.tooltip-up, .tooltip-down {
+    position: absolute;
+    width: 88px;
+    height: 88px;
+}
+
+.tooltip-down {
+    background-position: 0 -37px;
+}
+
+.tooltip {
+    display: none;
+    width: 400px;
+    cursor: help;
+    text-shadow: 0 1px 0 #fff;
+    position: absolute;
+    top: 40px;
+    z-index: 999;
+    margin-left: -155px;
+    padding:15px;
+    color: #222;
+    border-radius: 5px;
+    box-shadow: 0 3px 0 rgba(0,0,0,.1);
+    background: #ECF6FF;
+    background: linear-gradient(top, #fff1d3, #ffdb90);  
+    border: 3px solid rgb(00 69 134 / 10%);
+    border-radius: 20px;
+}
+
+.tooltip::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    margin-left: -10px;
+    border-bottom: 10px solid #ECF6FF;
+    border-left: 10px solid transparent;
+    border-right : 10px solid transparent;
+}
+
+.tooltip-down .tooltip {
+    bottom: 40px;
+    top: auto;
+}
+
+.tooltip-down .tooltip::after {
+    bottom: -10px;
+    top: auto;
+    border-bottom: 0;
+    border-top: 10px solid #ECF6FF;
+}
+
+.tooltip h2 {
+    font: bold 1.3em 'Trebuchet MS', Tahoma, Arial;
+    margin: 0 0 10px;
+}
+
+.tooltip ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}

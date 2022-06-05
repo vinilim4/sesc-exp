@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/layout.css"/>
+    <link rel="stylesheet" type="text/css" href="css/responsive.css"/>
+    <title>Sesc Exposição</title>
+</head>
+<body>
+    <section id="top">
+        <header>
+            <div class="nav-wrapper">
+                <nav class="row nav-padrao">
+                    <div class="col s8 m6 offset-m1 offset-l1 l3"> <!-- /col -->
+						<a href="#!" class="brand-logo left"><img class="logo" src="imagens/logo-sesc.png" alt="Sesc"/></a>
+					</div> <!-- /col -->
+                    <div class="col s8 m6 offset-m1 offset-l1 l3 right"> <!-- /col -->
+						<a href="index.html" class="right"><button class="botao waves-effect">VOLTAR</button></a>
+					</div> <!-- /col -->
+                </nav> <!-- /row -->
+            </div>  <!-- /navbar -->
+        </header>
+        <div id="info" class="container">
+                <div class="row">
+                    <div class="col s12 m5 l5">
+                        <header>
+                            <h2>Conheça mais sobre o Espaço Coleção Josevaldo Araújo de Melo</h2>
+                        </header>
+
+                        <div class="botao-apresentacao left">  
+                            <button class="botao waves-effect" id="btn-descricao" onclick="inserirTexto('texto-apresentacao', 'btn-descricao')"><i  class="material-icons">description</i></button>
+                        </div>
+                    </div> <!-- .col -->
+
+                    <div class="col s12 m7 l7">
+                        <a href="#!"><img class="responsive-img" id="foto-fachada" src="imagens/foto-fachada.png" alt="Sesc"/></a>
+                    </div> <!-- .col -->      
+
+                </div> <!-- .row -->
+                          
+
+                
+         </div>
+    </section> <!-- /section#top -->
+    
+    <div id="texto-apresentacao" class="container show">
+        <p class="texto1">
+        O Espaço Coleção Josevaldo Araújo de Melo compõe o complexo de equipamentos culturais oferecidos 
+        pelo Centro de Produção Cultural, Tecnologia e Negócios - CPC Garanhuns que integra um Teatro, Cinema e Centro de convenções relacionando, 
+        assim, arte, cultura, inovação, tecnologias e negócios tendo sua proposta estruturante pautada nos conceitos em direito e diversidade cultural, 
+        acessibilidade e economia criativa. </p>
+
+        
+        <img class="imagem-apresentacao" src="imagens/imagem-apresentacao.png" alt="">
+
+       <p class="texto1">A sala expositiva apresenta uma mostra com projeto curatorial que abarca a multiplicidade de conteúdos do acervo da coleção do professor Josevaldo Araújo de Melo que foi doado ao Sesc em 2010. 
+           O conjunto de obras tem características tão heterogêneas quanto diversas, dado que, são advindas de vários estados do Brasil e outros países da América Latina. 
+           Vale salientar que a coleção possui significativo recorte de artistas populares pernambucanos. 
+        </p>
+         
+        <p class="texto1">
+        Dezesseis anos de pesquisas e aquisições de obras de arte é que definem o professor Josevaldo Araújo de Melo como um colecionador 
+        trazendo, por sua vez, como característica marcante: o ato de colecionar que envolve, sobretudo, a paixão e a busca incansável pelo objeto. Desse modo, 
+        o acervo aqui exposto reafirma a força simbólica de uma coleção intentando para a mesma enquanto um importante registro histórico e cultural de um determinado tempo e território, 
+        além da relação ativa que uma coleção possui com a cadeia produtiva da arte.
+        As séries de obras apresentadas estão dispostas a partir de conteúdos conceituais e simbólicos suscitando discursões acerca de como a produção de arte popular na América Latina traz traços identitários de um cotidiano permeado pelas influências advindas dos processos de colonização, entretanto, também apresentam as estratégias de resistência adotadas pelas culturas originárias. Tais questões aparecem como marca fundamental desse registro.
+        Para além de um programa de exposições, o espaço se desdobra como um lugar de experimentações, performances artísticas e atividades formativas para os diversos públicos através do Atelier LabColeção. Dessa maneira, é que o espaço da Coleção Josevaldo Araújo de Melo surge com o objetivo de promover experiências dos públicos com as artes visuais e suas transversalidades, aprofundando discussões relacionadas ao direito à diversidade e à acessibilidade e estimulando a criatividade e a articulação dos vários campos do conhecimento a partir de projetos multidisciplinares.
+        Bem vindos e boa experiência
+        </p> 
+
+        <div class="row">
+                            
+            <div class="col s6 m1 l1">
+                <!-- Audio da Exposição -->
+                    <audio id="audio-apresentacao">
+                        <source src="audios\Audio indigenas_Rafael_OK\Arte Marajoara_Rafael.wav" type="audio/mpeg">
+                    </audio>
+                    <button class="botao-audio waves-effect" id="playPauseBTN" onclick="playPause('audio-apresentacao', 'playPauseIcone', 'playPauseBTN', 'progresso', '.inicio', '.fim')"><i  class="material-icons" id="playPauseIcone">play_arrow</i></button>  
+                </div>
+            <div class="col s6 m4 l4">
+                    <div class="duracao">
+                            <div class="barra">
+                                <progress value="1" max="1" id="progresso"></progress>
+                            </div>
+                            <div class="tempo">
+                                <p class="inicio">0:00</p>
+                                <p class="fim">0:00</p>
+                            </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+
+    <section id="exposicao">
+         <!-- Exposição -->
+        <div class="row container">
+                     <h5 class="titulo-exp">Exposição</h5>
+                <ul class="tabs col s6 m12 center">
+                    <li class="tab col s3 m3 l3"><a class="active waves-effect" href="#test1"></a></li>
+                    <li class="tab col s3 m3 l3"><a class="waves-effect" href="#test2"></a></li>
+                    <li class="tab col s3 m3 l3"><a class="waves-effect" href="#test3"></a></li>
+                    <li class="tab col s3 m3 l3"><a class="waves-effect" href="#test4"></a></li>
+                  </ul>
+                    
+        </div>
+     
+
+        <div class="container">
+                    <div id="test1" class="conteudo-aba active">
+                        <div class="row">
+                            <div class="col s6 m6 l6">
+                                <h4>Arte Latina-Americana: um
+                                    olhar sobre a diversidade</h4>
+                                    <div class="botao-arte1 left">  
+                                        <button class="botao waves-effect" id="btn-arte1" onclick="inserirTexto('texto-arte1', 'btn-arte1')"><i  class="material-icons">description</i></button>
+                                        <audio id="audio-arte1">
+                                            <source src="audios\Paises Latino Americano_Rafael_OK\Obras Paises Latinos_Rafael.wav" type="audio/mpeg">
+                                        </audio>
+                                        <button class="botao waves-effect" id="play-arte1" onclick="playPauseSemBarra('audio-arte1', 'play-arte1-icone', 'play-arte1')"><i  class="material-icons" id="play-arte1-icone">play_arrow</i></button>   
+                                    </div>
+                                </div>                                   
+                                <div class="col s6 m6 l6 center">
+                                    <img src="imagens/arte-1.png" alt="">
+                                </div>
+                            </div>
+                            <div id="texto-arte1" class="texto-aba">
+                                <p>
+                                    Uma série de elementos presentes em nosso cotidiano expressam nossas formas de contemplar o mundo, isso reflete os encontros e desencontros traçados no percurso histórico de um povo. Como o próprio conceito de "América Latina" que é utilizado para referenciar países dos quais falam idiomas românicos, ou seja, aqueles que derivam do latim: português, espanhol e Francês. O termo também remonta questões históricas e culturais.
+                                    Muitas manifestações artísticas europeias foram incorporadas nesta região, (principalmente às que difundiam a cristandade) que em contato com as demais, teriam dado surgimento ao chamado hibridismo cultural. Essa hibridação gerou uma vasta produção de arte popular, nos mais variados materiais e suportes.
+                                    No que tange a cultura regional, é de suma importância destacar, as produções nativas pré-colombianas das regiões denominadas Andes e Mesoamérica, que pela interferência ocidental, permaneceram ocultas por bastante tempo. Essas culturas ficaram registradas iconograficamente em sua maioria na arquitetura, nos objetos de cerâmica, nos artefatos de pedra e metal. 
+                                     Na região dos Andes, onde atualmente localiza-se o Peru, desenvolveram-se culturas pré-incas como a Chavin, a Moche e a Lambayeque-Chimu. No caso Mesoamérico é possível listar uma vasta produção realizada pelas civilizações Maias, Zapotecas, Olmecas, Toltecas, Mexicas e Astecas. No Brasil pré-colonial também se consolidou uma criação artística, podendo citar a dos povos que habitaram a ilha do Marajó (localizada no estado do Pará, na foz do rio Amazonas).
+                                     As características culturais de cada uma das vinte nações latino-americanas expressam muito fortemente sua ancestralidade e sua identidade nas expressões e produções artísticas de cada contexto em que suas histórias foram construídas e possuem significados e signos carregados de vivências e, pela busca por sentido no mundo, sendo impossível as homogeneizar em uma única.
+                                    Vários artistas assumiram o papel de agentes problematizadores da ideia de América latina, partindo da reflexão acerca de seu lugar nessa região. E, é diante dessa discussão que surge uma arte latino-americana como crítica à realidade opressora marcada por regimes políticos ditatoriais, problemas econômicos e sociais.
+                                    Assim, olhar a arte como um bem universal torna-se uma tarefa imprescindível para ruptura com antigas barreiras culturais, como é apontado por Boone e Salistre (2015) "[...] De um canto ao outro do mundo, inúmeras variáveis tornam a arte diferente, mas é o homem visto como um ser universal que torna a arte como um bem cultural de todos, independente da cultura, da raça, ou da sua cor."
+                                    
+                                </br></br><strong>Geicy Albuquerque</strong> 
+                                </p>
+                                
+                                <div class="row container audio-arte">
+                                    <!-- Audio da Arte 1.1 -->
+                                    <h5>Argentina</h5>
+                                    <div class="col s6 m1 l1">
+                                   <audio id="audio-arte1-1">
+                                       <source src="audios\Paises Latino Americano_Rafael_OK\Argentina_Rafael.wav" type="audio/mpeg">
+                                   </audio>
+                                   <button class="botao-audio waves-effect" id="play-arte1-1" onclick="playPause('audio-arte1-1', 'play-arte1-1-icone', 'play-arte1-1', 'progresso-arte1-1', '.inicio-arte1-1', '.fim-arte1-1')"><i  class="material-icons" id="play-arte1-1-icone">play_arrow</i></button>                        
+                                           </div>
+                                   <div class="col s6 m4 l4">
+                                       <div class="duracao">
+                                           <div class="barra">
+                                               <progress value="1" max="1" id="progresso-arte1-1"></progress>
+                                           </div>
+                                           <div class="tempo">
+                                               <p class="inicio-arte1-1">0:00</p>
+                                               <p class="fim-arte1-1">0:00</p>
+                                           </div>
+                                           </div> 
+                                       </div>
+                                   </div>
+                                   <div class="row container audio-arte">
+                                    <!-- Audio da Arte 1.2 -->
+                                    <h5>Chile</h5>
+                                    <div class="col s6 m1 l1">
+                                   <audio id="audio-arte1-2">
+                                       <source src="audios\Paises Latino Americano_Rafael_OK\Chilee_Rafael.wav" type="audio/mpeg">
+                                   </audio>
+                                   <button class="botao-audio waves-effect" id="play-arte1-2" onclick="playPause('audio-arte1-2', 'play-arte1-2-icone', 'play-arte1-2', 'progresso-arte1-2', '.inicio-arte1-2', '.fim-arte1-2')"><i  class="material-icons" id="play-arte1-2-icone">play_arrow</i></button>                        
+                                           </div>
+                                   <div class="col s6 m4 l4">
+                                       <div class="duracao">
+                                           <div class="barra">
+                                               <progress value="1" max="1" id="progresso-arte1-2"></progress>
+                                           </div>
+                                           <div class="tempo">
+                                               <p class="inicio-arte1-2">0:00</p>
+                                               <p class="fim-arte1-2">0:00</p>
+                                           </div>
+                                           </div> 
+                                       </div>
+                                   </div>
+                                   <div class="row container audio-arte">
+                                    <!-- Audio da Arte 1.3 -->
+                                    <h5>Civilização Maia</h5>
+                                    <div class="col s6 m1 l1">
+                                   <audio id="audio-arte1-3">
+                                       <source src="audios\Paises Latino Americano_Rafael_OK\Civilizacao Maia_Rafael.wav" type="audio/mpeg">
+                                   </audio>
+                                   <button class="botao-audio waves-effect" id="play-arte1-3" onclick="playPause('audio-arte1-3', 'play-arte1-3-icone', 'play-arte1-3', 'progresso-arte1-3', '.inicio-arte1-3', '.fim-arte1-3')"><i  class="material-icons" id="play-arte1-3-icone">play_arrow</i></button>                        
+                                           </div>
+                                   <div class="col s6 m4 l4">
+                                       <div class="duracao">
+                                           <div class="barra">
+                                               <progress value="1" max="1" id="progresso-arte1-3"></progress>
+                                           </div>
+                                           <div class="tempo">
+                                               <p class="inicio-arte1-3">0:00</p>
+                                               <p class="fim-arte1-3">0:00</p>
+                                           </div>
+                                           </div> 
+                                       </div>
+                                   </div>
+                                   <div class="row container audio-arte">
+                                    <!-- Audio da Arte 1.4 -->
+                                    <h5>Império Asteca</h5>
+                                    <div class="col s6 m1 l1">
+                                   <audio id="audio-arte1-4">
+                                       <source src="audios\Paises Latino Americano_Rafael_OK\Imperio Asteca_Rafael.wav" type="audio/mpeg">
+                                   </audio>
+                                   <button class="botao-audio waves-effect" id="play-arte1-4" onclick="playPause('audio-arte1-4', 'play-arte1-4-icone', 'play-arte1-4', 'progresso-arte1-4', '.inicio-arte1-4', '.fim-arte1-4')"><i  class="material-icons" id="play-arte1-4-icone">play_arrow</i></button>                        
+                                           </div>
+                                   <div class="col s6 m4 l4">
+                                       <div class="duracao">
+                                           <div class="barra">
+                                               <progress value="1" max="1" id="progresso-arte1-4"></progress>
+                                           </div>
+                                           <div class="tempo">
+                                               <p class="inicio-arte1-4">0:00</p>
+                                               <p class="fim-arte1-4">0:00</p>
+                                           </div>
+                                           </div> 
+                                       </div>
+                                   </div>
+                                   <div class="row container audio-arte">
+                                    <!-- Audio da Arte 1.5 -->
+                                    <h5>Peru - Império Inca</h5>
+                                    <div class="col s6 m1 l1">
+                                   <audio id="audio-arte1-5">
+                                       <source src="audios\Paises Latino Americano_Rafael_OK\Peru - Imperio Inca_Rafael.wav" type="audio/mpeg">
+                                   </audio>
+                                   <button class="botao-audio waves-effect" id="play-arte1-5" onclick="playPause('audio-arte1-5', 'play-arte1-5-icone', 'play-arte1-5', 'progresso-arte1-5', '.inicio-arte1-5', '.fim-arte1-5')"><i  class="material-icons" id="play-arte1-5-icone">play_arrow</i></button>                        
+                                           </div>
+                                   <div class="col s6 m4 l4">
+                                       <div class="duracao">
+                                           <div class="barra">
+                                               <progress value="1" max="1" id="progresso-arte1-5"></progress>
+                                           </div>
+                                           <div class="tempo">
+                                               <p class="inicio-arte1-5">0:00</p>
+                                               <p class="fim-arte1-5">0:00</p>
+                                           </div>
+                                           </div> 
+                                       </div>
+                                   </div>
+                            </div>
+                        </div>
+
+                        
+                            
+                        
+
+                    <div id="test2" class="conteudo-aba"> 
+                            <div class="row">
+                            <!-- Audio da Arte 2.1 -->
+                            <div class="col s12 m6 l6">
+                                <h4>Diversidade, Identidade e Transformação e arte popular brasileira na contemporaneidade</h4>
+                                <div class="botao-arte2 left">  
+                                    <button class="botao waves-effect" id="btn-arte2" onclick="inserirTexto('texto-arte2', 'btn-arte2')"><i  class="material-icons">description</i></button>  
+                                    <audio id="audio-arte2-1">
+                                        <source src="audios\Mestres_Rafael_OK\ARTE DA GENTE_Rafael.wav" type="audio/mpeg">
+                                    </audio>
+                                    <button class="botao waves-effect" id="play-arte2-1" onclick="playPauseSemBarra('audio-arte2-1', 'play-arte2-1-icone', 'play-arte2-1')"><i  class="material-icons" id="play-arte2-1-icone">play_arrow</i></button>
+                                </div>                           
+                            </div>
+
+                            <div class="col s12 m6 l6 center">
+                                <img src="imagens/arte-2.png" alt="">
+                            </div>
+                        </div>
+                        <div id="texto-arte2" class="texto-aba">
+                            <p>
+                                A produção de arte popular nos diversos territórios do Brasil revela uma tentativa, nem sempre exitosa, de resistir aos padrões estéticos estipulados modelos artísticos hegemônicos. As obras de arte, objetos e artefatos, trazem intrinsecamente a reflexão que não existe apenas um mundo dos saberes formais e eruditos mas, um universo de raízes históricas advindas da relação do povo com a sua territorialidade, o meio ambiente, a natureza e a espiritualidade. Assim, essa reflexão reverbera em manifestações artísticas que são leituras de mundo legítimas.
+                                Segundo Pio Guerra Júnior (2006), “a arte tradicional popular é um patrimônio rico e expressivo revelado por artistas, autores-intérpretes das mais distintas identidades”. Dessa maneira, a arte popular é construída por um caráter complexo e heterogêneo, contendo várias concepções e manifestações artísticas marcadas, em muitos casos, por religiosidades que se corporificam através de obras com grande força simbólica vinculada às devoções.</p>
+
+                                <p>Os artistas populares trabalham com materialidades e suportes suscitando novos sentidos, novas narrativas do cotidiano, novas interpretações para elementos vindos da terra, criando assim, não um território ou um lugar, mas um corpo-coletivo que atravessa a contemporaneidade não se desprendendo dos saberes ancestrais.</p>
+                                
+                                <p>As identidades impressas nesse corpo-coletivo figuram a multiculturalidade brasileira, representada por artistas como Ana das Carrancas, J. Borges, Luiz Galdino, Marcos Siqueira, Zezinho de Tracunhaém, José Veríssimo e tantos outros. Maria Alice Amorim (2006), relata que “a produção do artista popular é muito mais que uma atividade artesanal; antes de tudo, significa a defesa de identidade cultural, étnica, que passa pela matéria-prima regional e pela transmissão de saberes locais. Os artesãos que são artistas em conexão com uma coletividade, criam produções saídas das entranhas da natureza e constroem um retrato social do povo e de sua cultura, carregando em seu fazer artístico um símbolo potente numa obra comunicadora das situações experienciadas”. 
+                                Assim, o artista popular transforma a sua expressividade artística em um canal para contar narrativas sociais estabelecendo um caráter político e conceitual à sua criação.
+                                Carla Montanha
+
+
+                                
+                            </br></br><strong>Geicy Albuquerque</strong> 
+                            </p>
+                            <div class="row container audio-arte">
+                                <!-- Audio da Arte 2.2 -->
+                                <h5>Manoel Galdino Freitas</h5>
+                                <div class="col s6 m1 l1">
+                               <audio id="audio-arte2-2">
+                                   <source src="audios\Mestres_Rafael_OK\MANOEL GALDINO FREITAS_Rafael.wav" type="audio/mpeg">
+                               </audio>
+                               <button class="botao-audio waves-effect" id="play-arte2-2" onclick="playPause('audio-arte2-2', 'play-arte2-2-icone', 'play-arte2-2', 'progresso-arte2-2', '.inicio-arte2-2', '.fim-arte2-2')"><i  class="material-icons" id="play-arte2-2-icone">play_arrow</i></button>                        
+                                       </div>
+                               <div class="col s6 m4 l4">
+                                   <div class="duracao">
+                                       <div class="barra">
+                                           <progress value="1" max="1" id="progresso-arte2-2"></progress>
+                                       </div>
+                                       <div class="tempo">
+                                           <p class="inicio-arte2-2">0:00</p>
+                                           <p class="fim-arte2-2">0:00</p>
+                                       </div>
+                                       </div> 
+                                   </div>
+                               </div>
+
+                               <div class="row container audio-arte">
+                                <!-- Audio da Arte 2.3 -->
+                                <h5>Marcos Paulo</h5>
+                                <div class="col s6 m1 l1">
+                               <audio id="audio-arte2-3">
+                                   <source src="audios\Mestres_Rafael_OK\Marcos Paulo_Rafael.wav" type="audio/mpeg">
+                               </audio>
+                               <button class="botao-audio waves-effect" id="play-arte2-3" onclick="playPause('audio-arte2-3', 'play-arte2-3-icone', 'play-arte2-3', 'progresso-arte2-3', '.inicio-arte2-3', '.fim-arte2-3')"><i  class="material-icons" id="play-arte2-3-icone">play_arrow</i></button>                        
+                                       </div>
+                               <div class="col s6 m4 l4">
+                                   <div class="duracao">
+                                       <div class="barra">
+                                           <progress value="1" max="1" id="progresso-arte2-3"></progress>
+                                       </div>
+                                       <div class="tempo">
+                                           <p class="inicio-arte2-3">0:00</p>
+                                           <p class="fim-arte2-3">0:00</p>
+                                       </div>
+                                       </div> 
+                                   </div>
+                               </div>
+
+                               <div class="row container audio-arte">
+                                <!-- Audio da Arte 2.4 -->
+                                <h5>Marcos Siqueira</h5>
+                                <div class="col s6 m1 l1">
+                               <audio id="audio-arte2-4">
+                                   <source src="audios\Mestres_Rafael_OK\Marcos Siqueira_Rafael.wav" type="audio/mpeg">
+                               </audio>
+                               <button class="botao-audio waves-effect" id="play-arte2-4" onclick="playPause('audio-arte2-4', 'play-arte2-4-icone', 'play-arte2-4', 'progresso-arte2-4', '.inicio-arte2-4', '.fim-arte2-4')"><i  class="material-icons" id="play-arte2-4-icone">play_arrow</i></button>                        
+                                       </div>
+                               <div class="col s6 m4 l4">
+                                   <div class="duracao">
+                                       <div class="barra">
+                                           <progress value="1" max="1" id="progresso-arte2-4"></progress>
+                                       </div>
+                                       <div class="tempo">
+                                           <p class="inicio-arte2-4">0:00</p>
+                                           <p class="fim-arte2-4">0:00</p>
+                                       </div>
+                                       </div> 
+                                   </div>
+                               </div>
+
+                               <div class="row container audio-arte">
+                                <!-- Audio da Arte 2.5 -->
+                                <h5>Mestre Fida</h5>
+                                <div class="col s6 m1 l1">
+                               <audio id="audio-arte2-5">
+                                   <source src="audios\Mestres_Rafael_OK\Mestre Fida_Rafael.wav" type="audio/mpeg">
+                               </audio>
+                               <button class="botao-audio waves-effect" id="play-arte2-5" onclick="playPause('audio-arte2-5', 'play-arte2-5-icone', 'play-arte2-5', 'progresso-arte2-5', '.inicio-arte2-5', '.fim-arte2-5')"><i  class="material-icons" id="play-arte2-5-icone">play_arrow</i></button>                        
+                                       </div>
+                               <div class="col s6 m4 l4">
+                                   <div class="duracao">
+                                       <div class="barra">
+                                           <progress value="1" max="1" id="progresso-arte2-5"></progress>
+                                       </div>
+                                       <div class="tempo">
+                                           <p class="inicio-arte2-5">0:00</p>
+                                           <p class="fim-arte2-5">0:00</p>
+                                       </div>
+                                       </div> 
+                                   </div>
+                               </div>
+
+                               <div class="row container audio-arte">
+                                <!-- Audio da Arte 2.6 -->
+                                <h5>Mestre Marcos Santeiro</h5>
+                                <div class="col s6 m1 l1">
+                               <audio id="audio-arte2-6">
+                                   <source src="audios\Mestres_Rafael_OK\Mestre Marcos Santeiro 2_Rafael.wav" type="audio/mpeg">
+                               </audio>
+                               <button class="botao-audio waves-effect" id="play-arte2-6" onclick="playPause('audio-arte2-6', 'play-arte2-6-icone', 'play-arte2-6', 'progresso-arte2-6', '.inicio-arte2-6', '.fim-arte2-6')"><i  class="material-icons" id="play-arte2-6-icone">play_arrow</i></button>                        
+                                       </div>
+                               <div class="col s6 m4 l4">
+                                   <div class="duracao">
+                                       <div class="barra">
+                                           <progress value="1" max="1" id="progresso-arte2-6"></progress>
+                                       </div>
+                                       <div class="tempo">
+                                           <p class="inicio-arte2-6">0:00</p>
+                                           <p class="fim-arte2-6">0:00</p>
+                                       </div>
+                                       </div> 
+                                   </div>
+                               </div>
+
+                               <div class="row container audio-arte">
+                                <!-- Audio da Arte 2.7 -->
+                                <h5>Mestre Marcos Santeiro</h5>
+                                <div class="col s6 m1 l1">
+                               <audio id="audio-arte2-7">
+                                   <source src="audios\Mestres_Rafael_OK\Mestre Marcos Santeiro 2_Rafael.wav" type="audio/mpeg">
+                               </audio>
+                               <button class="botao-audio waves-effect" id="play-arte2-7" onclick="playPause('audio-arte2-7', 'play-arte2-7-icone', 'play-arte2-7', 'progresso-arte2-7', '.inicio-arte2-7', '.fim-arte2-7')"><i  class="material-icons" id="play-arte2-7-icone">play_arrow</i></button>                        
+                                       </div>
+                               <div class="col s6 m4 l4">
+                                   <div class="duracao">
+                                       <div class="barra">
+                                           <progress value="1" max="1" id="progresso-arte2-7"></progress>
+                                       </div>
+                                       <div class="tempo">
+                                           <p class="inicio-arte2-7">0:00</p>
+                                           <p class="fim-arte2-7">0:00</p>
+                                       </div>
+                                       </div> 
+                                   </div>
+                               </div>
+
+                               <div class="row container audio-arte">
+                                <!-- Audio da Arte 2.8 -->
+                                <h5>Mestre Tog</h5>
+                                <div class="col s6 m1 l1">
+                               <audio id="audio-arte2-8">
+                                   <source src="audios\Mestres_Rafael_OK\Mestre Tog_Rafael.wav" type="audio/mpeg">
+                               </audio>
+                               <button class="botao-audio waves-effect" id="play-arte2-8" onclick="playPause('audio-arte2-8', 'play-arte2-8-icone', 'play-arte2-8', 'progresso-arte2-8', '.inicio-arte2-8', '.fim-arte2-8')"><i  class="material-icons" id="play-arte2-8-icone">play_arrow</i></button>                        
+                                       </div>
+                               <div class="col s6 m4 l4">
+                                   <div class="duracao">
+                                       <div class="barra">
+                                           <progress value="1" max="1" id="progresso-arte2-8"></progress>
+                                       </div>
+                                       <div class="tempo">
+                                           <p class="inicio-arte2-8">0:00</p>
+                                           <p class="fim-arte2-8">0:00</p>
+                                       </div>
+                                       </div> 
+                                   </div>
+                               </div>
+
+                               
+                               
+                        </div>
+                    </div>
+
+                    <div id="test3" class="conteudo-aba">
+                        <div class="row">
+
+                            <div class="col s6 m6 l6">
+                                <h4>Artes indígenas: corpos que significam, falam, se movem e se atualizam</h4>
+                                <div class="botao-arte3 left">  
+                                    <button class="botao waves-effect" id="btn-arte3" onclick="inserirTexto('texto-arte3', 'btn-arte3')"><i  class="material-icons">description</i></button>  
+                                    <!-- Audio da Arte 3.1 -->
+                                    <audio id="audio-arte3">
+                                        <source src="audios\Audio indigenas_Rafael_OK\Arte Indigena_Rafael.wav" type="audio/mpeg">
+                                    </audio>
+                                    <button class="botao waves-effect" id="play-arte3" onclick="playPauseSemBarra('audio-arte3', 'play-arte3-icone', 'play-arte3')"><i  class="material-icons" id="play-arte3-icone">play_arrow</i></button>
+                                </div>
+                            </div>
+
+                            <div class="col s6 m6 l6 center">
+                                <img src="imagens/arte-3.png" alt="">
+                            </div>
+                        </div>
+
+                        <div id="texto-arte3" class="texto-aba">
+                            <p>
+                                Ao longo desses cinco séculos pós-colonização, diante dos processos e instrumentos etnocidas e genocidas que se atualizam sobre os povos originários do Continente Americano, ou melhor dizer de Abya ayala,  refletir sobre a presença das manifestações culturais indígenas nos espaços legitimadores da arte, numa relação de alteridade que não contribua para a manutenção dos discursos e narrativas hegemônicas,  é nos submetermos a imaginar algo que não existe? 
+                                Ao deslocarmos o olhar sobre as Artes Indígenas nos deparamos com uma gama diversa de expressividades que trazem consigo as cosmovisões de cada etnia, povo, e as relações de partilha de saberes entre eles e a sociedade, evidenciando os seus costumes, modos de vidas e fenômenos sociopolíticos que atravessam os múltiplos contextos nos quais estão inseridos: aldeamentos em florestas, em regiões interioranas e nos contextos urbanos.
+                                Essas expressividades são materializadas pelos processos que atravessam a corporeidade transbordando muitas vezes a compreensão ocidental sobre Arte e Vida. Sob essa perspectiva, é importante estabelecer diálogos pelos quais possamos compreender que as Artes Indígenas resultam de agências entre corpos não autônomos entre si, onde os realizadores, produções e contexto se configuram como extensões uns dos outros. Segundo o artista indígena Esbell (2020): 
+                                Os artistas indígenas são pensadores que se projetam como a extensão de seus próprios corpos numa distensão de outras vidas que nunca deixaram de ser vidas, mas passam a estar presentes deste lado por meio de suas essenciais energias; dar continuidade e vazão aos seus conteúdos, fontes inesgotáveis de si mesmos, corpo maior além compreensões. 
+                                O entendimento das inter e intra relações entre esses corpos que culminam em  corpo uno “realizador-produção-contexto” é um fator crucial para se pensar “abordagens sobre as Artes Indígenas que possibilitem o não esvaziamento de seus significados, evidenciado  por diálogos mediados somente por meio de códigos ocidentais” (KRENAK, 2018). É importante ressaltar que compreender as Artes Indígenas não é ampliar o conceito ocidental de arte, mas sim imaginar outras artes, outras possibilidades de fruição e percepção estética, é encarar outras possibilidades de representar, significar e se comunicar.
+                                Diante disso, à medida que entendemos as Artes Indígenas como “um outro tipo de arte”, promovemos o rompimento das abordagens equivocadas de assimilação desses corpos-obras aos cânones e paradigmas universais que configuram e legitimam as artes hegemônicas, onde muitas das vezes colocam as produções indígenas dentro de uma temporalidade no passado e as classificam como primitivas. 
+                                As artes Indígenas trazem consigo mundos, saberes, “ciências”, ancestralidade, “vão além do reduto metafísico ocidental” (DAMIÃO, 2019), não cabe a essas obras  o lugar de representar, mais de significar, de possibilitar reencontros entre o público e as matrizes culturais originárias deste continente, que existem, resistem e se atualizam. Reencontros capazes de possibilitar reconhecimento e sentimento de pertencimento entre obras e o público, para que este não se sinta estrangeiro em seu próprio território.   
+
+                            </br></br><strong>Ziel Karapotó</strong> 
+                            </p>
+                
+                               <div class="row container audio-arte">
+                                <!-- Audio da Arte 3.2 -->
+                                <h5>Arte Marajoara</h5>
+                                <div class="col s6 m1 l1">
+                               <audio id="audio-arte3-2">
+                                   <source src="audios\Audio indigenas_Rafael_OK\Arte Marajoara_Rafael.wav" type="audio/mpeg">
+                               </audio>
+                               <button class="botao-audio waves-effect" id="play-arte3-2" onclick="playPause('audio-arte3-2', 'play-arte3-2-icone', 'play-arte3-2', 'progresso-arte3-2', '.inicio-arte3-2', '.fim-arte3-2')"><i  class="material-icons" id="play-arte3-2-icone">play_arrow</i></button>                        
+                                </div>
+                               <div class="col s6 m4 l4">
+                                   <div class="duracao">
+                                       <div class="barra">
+                                           <progress value="1" max="1" id="progresso-arte3-2"></progress>
+                                       </div>
+                                       <div class="tempo">
+                                           <p class="inicio-arte3-2">0:00</p>
+                                           <p class="fim-arte3-2">0:00</p>
+                                       </div>
+                                       </div> 
+                                   </div>
+                               </div>
+
+                               <div class="row container audio-arte">
+                                <!-- Audio da Arte 3.3 -->
+                                <h5>Bororo - Mato Grosso</h5>
+                                <div class="col s6 m1 l1">
+                               <audio id="audio-arte3-3">
+                                   <source src="audios\Audio indigenas_Rafael_OK\Bororo - Mato Grosso_Rafael.wav" type="audio/mpeg">
+                               </audio>
+                               <button class="botao-audio waves-effect" id="play-arte3-3" onclick="playPause('audio-arte3-3', 'play-arte3-3-icone', 'play-arte3-3', 'progresso-arte3-3', '.inicio-arte3-3', '.fim-arte3-3')"><i  class="material-icons" id="play-arte3-3-icone">play_arrow</i></button>                        
+                                </div>
+                               <div class="col s6 m4 l4">
+                                   <div class="duracao">
+                                       <div class="barra">
+                                           <progress value="1" max="1" id="progresso-arte3-3"></progress>
+                                       </div>
+                                       <div class="tempo">
+                                           <p class="inicio-arte3-3">0:00</p>
+                                           <p class="fim-arte3-3">0:00</p>
+                                       </div>
+                                       </div> 
+                                   </div>
+                               </div>
+
+                               <div class="row container audio-arte">
+                                <!-- Audio da Arte 3.4 -->
+                                <h5>Fulnio - Aguas Belas PE</h5>
+                                <div class="col s6 m1 l1">
+                               <audio id="audio-arte3-4">
+                                   <source src="audios\Audio indigenas_Rafael_OK\Fulnio - Aguas Belas PE_ Rafael.wav" type="audio/mpeg">
+                               </audio>
+                               <button class="botao-audio waves-effect" id="play-arte3-4" onclick="playPause('audio-arte3-4', 'play-arte3-4-icone', 'play-arte3-4', 'progresso-arte3-4', '.inicio-arte3-4', '.fim-arte3-4')"><i  class="material-icons" id="play-arte3-4-icone">play_arrow</i></button>                        
+                                </div>
+                               <div class="col s6 m4 l4">
+                                   <div class="duracao">
+                                       <div class="barra">
+                                           <progress value="1" max="1" id="progresso-arte3-4"></progress>
+                                       </div>
+                                       <div class="tempo">
+                                           <p class="inicio-arte3-4">0:00</p>
+                                           <p class="fim-arte3-4">0:00</p>
+                                       </div>
+                                       </div> 
+                                   </div>
+                               </div>
+
+                               <div class="row container audio-arte">
+                                <!-- Audio da Arte 3.5 -->
+                                <h5>Kaiapo - Pará</h5>
+                                <div class="col s6 m1 l1">
+                               <audio id="audio-arte3-5">
+                                   <source src="audios\Audio indigenas_Rafael_OK\Kaiapo_Para_ok_Rafael.wav" type="audio/mpeg">
+                               </audio>
+                               <button class="botao-audio waves-effect" id="play-arte3-5" onclick="playPause('audio-arte3-5', 'play-arte3-5-icone', 'play-arte3-5', 'progresso-arte3-5', '.inicio-arte3-5', '.fim-arte3-5')"><i  class="material-icons" id="play-arte3-5-icone">play_arrow</i></button>                        
+                                </div>
+                               <div class="col s6 m4 l4">
+                                   <div class="duracao">
+                                       <div class="barra">
+                                           <progress value="1" max="1" id="progresso-arte3-5"></progress>
+                                       </div>
+                                       <div class="tempo">
+                                           <p class="inicio-arte3-5">0:00</p>
+                                           <p class="fim-arte3-5">0:00</p>
+                                       </div>
+                                       </div> 
+                                   </div>
+                               </div>
+
+                               <div class="row container audio-arte">
+                                <!-- Audio da Arte 3.6 -->
+                                <h5>Kambiwa - Ibimirim-PE</h5>
+                                <div class="col s6 m1 l1">
+                               <audio id="audio-arte3-6">
+                                   <source src="audios\Audio indigenas_Rafael_OK\Kambiwa - Ibimirim-PE_Rafael.wav" type="audio/mpeg">
+                               </audio>
+                               <button class="botao-audio waves-effect" id="play-arte3-6" onclick="playPause('audio-arte3-6', 'play-arte3-6-icone', 'play-arte3-6', 'progresso-arte3-6', '.inicio-arte3-6', '.fim-arte3-6')"><i  class="material-icons" id="play-arte3-6-icone">play_arrow</i></button>                        
+                                </div>
+                               <div class="col s6 m4 l4">
+                                   <div class="duracao">
+                                       <div class="barra">
+                                           <progress value="1" max="1" id="progresso-arte3-6"></progress>
+                                       </div>
+                                       <div class="tempo">
+                                           <p class="inicio-arte3-6">0:00</p>
+                                           <p class="fim-arte3-6">0:00</p>
+                                       </div>
+                                       </div> 
+                                   </div>
+                               </div>
+
+                               <div class="row container audio-arte">
+                                <!-- Audio da Arte 3.7 -->
+                                <h5>Krenak - Sao Paulo</h5>
+                                <div class="col s6 m1 l1">
+                               <audio id="audio-arte3-7">
+                                   <source src="audios\Audio indigenas_Rafael_OK\Krenak - Sao Paulo_Rafael.wav" type="audio/mpeg">
+                               </audio>
+                               <button class="botao-audio waves-effect" id="play-arte3-7" onclick="playPause('audio-arte3-7', 'play-arte3-7-icone', 'play-arte3-7', 'progresso-arte3-7', '.inicio-arte3-7', '.fim-arte3-7')"><i  class="material-icons" id="play-arte3-7-icone">play_arrow</i></button>                        
+                                </div>
+                               <div class="col s6 m4 l4">
+                                   <div class="duracao">
+                                       <div class="barra">
+                                           <progress value="1" max="1" id="progresso-arte3-7"></progress>
+                                       </div>
+                                       <div class="tempo">
+                                           <p class="inicio-arte3-7">0:00</p>
+                                           <p class="fim-arte3-7">0:00</p>
+                                       </div>
+                                       </div> 
+                                   </div>
+                               </div>
+
+                               <div class="row container audio-arte">
+                                <!-- Audio da Arte 3.8 -->
+                                <h5>Pará</h5>
+                                <div class="col s6 m1 l1">
+                               <audio id="audio-arte3-8">
+                                   <source src="audios\Audio indigenas_Rafael_OK\PARAA_Rafael.wav" type="audio/mpeg">
+                               </audio>
+                               <button class="botao-audio waves-effect" id="play-arte3-8" onclick="playPause('audio-arte3-8', 'play-arte3-8-icone', 'play-arte3-8', 'progresso-arte3-8', '.inicio-arte3-8', '.fim-arte3-8')"><i  class="material-icons" id="play-arte3-8-icone">play_arrow</i></button>                        
+                                </div>
+                               <div class="col s6 m4 l4">
+                                   <div class="duracao">
+                                       <div class="barra">
+                                           <progress value="1" max="1" id="progresso-arte3-8"></progress>
+                                       </div>
+                                       <div class="tempo">
+                                           <p class="inicio-arte3-8">0:00</p>
+                                           <p class="fim-arte3-8">0:00</p>
+                                       </div>
+                                       </div> 
+                                   </div>
+                               </div>
+
+                               <div class="row container audio-arte">
+                                <!-- Audio da Arte 3.9 -->
+                                <h5>Pipipa  -  Floresta - PE</h5>
+                                <div class="col s6 m1 l1">
+                               <audio id="audio-arte3-9">
+                                   <source src="audios\Audio indigenas_Rafael_OK\Pipipa  -  Floresta -PE_Rafael.wav" type="audio/mpeg">
+                               </audio>
+                               <button class="botao-audio waves-effect" id="play-arte3-9" onclick="playPause('audio-arte3-9', 'play-arte3-9-icone', 'play-arte3-9', 'progresso-arte3-9', '.inicio-arte3-9', '.fim-arte3-9')"><i  class="material-icons" id="play-arte3-9-icone">play_arrow</i></button>                        
+                                </div>
+                               <div class="col s6 m4 l4">
+                                   <div class="duracao">
+                                       <div class="barra">
+                                           <progress value="1" max="1" id="progresso-arte3-9"></progress>
+                                       </div>
+                                       <div class="tempo">
+                                           <p class="inicio-arte3-9">0:00</p>
+                                           <p class="fim-arte3-9">0:00</p>
+                                       </div>
+                                       </div> 
+                                   </div>
+                               </div>
+
+                               <div class="row container audio-arte">
+                                <!-- Audio da Arte 3.10 -->
+                                <h5>Satere Mawe - Amazonas</h5>
+                                <div class="col s6 m1 l1">
+                               <audio id="audio-arte3-10">
+                                   <source src="audios\Audio indigenas_Rafael_OK\Satere Mawe_Amazonas_Rafael.wav" type="audio/mpeg">
+                               </audio>
+                               <button class="botao-audio waves-effect" id="play-arte3-10" onclick="playPause('audio-arte3-10', 'play-arte3-10-icone', 'play-arte3-10', 'progresso-arte3-10', '.inicio-arte3-10', '.fim-arte3-10')"><i  class="material-icons" id="play-arte3-10-icone">play_arrow</i></button>                        
+                                </div>
+                               <div class="col s6 m4 l4">
+                                   <div class="duracao">
+                                       <div class="barra">
+                                           <progress value="1" max="1" id="progresso-arte3-10"></progress>
+                                       </div>
+                                       <div class="tempo">
+                                           <p class="inicio-arte3-10">0:00</p>
+                                           <p class="fim-arte3-10">0:00</p>
+                                       </div>
+                                       </div> 
+                                   </div>
+                               </div>
+
+                               <div class="row container audio-arte">
+                                <!-- Audio da Arte 3.11 -->
+                                <h5>Xucuru Kariri - Alagoas</h5>
+                                <div class="col s6 m1 l1">
+                               <audio id="audio-arte3-11">
+                                   <source src="audios\Audio indigenas_Rafael_OK\Xucuru Kariri - Alagoas_Rafael.wav" type="audio/mpeg">
+                               </audio>
+                               <button class="botao-audio waves-effect" id="play-arte3-11" onclick="playPause('audio-arte3-11', 'play-arte3-11-icone', 'play-arte3-11', 'progresso-arte3-11', '.inicio-arte3-11', '.fim-arte3-11')"><i  class="material-icons" id="play-arte3-11-icone">play_arrow</i></button>                        
+                                </div>
+                               <div class="col s6 m4 l4">
+                                   <div class="duracao">
+                                       <div class="barra">
+                                           <progress value="1" max="1" id="progresso-arte3-11"></progress>
+                                       </div>
+                                       <div class="tempo">
+                                           <p class="inicio-arte3-11">0:00</p>
+                                           <p class="fim-arte3-11">0:00</p>
+                                       </div>
+                                       </div> 
+                                   </div>
+                               </div>
+
+                               <div class="row container audio-arte">
+                                <!-- Audio da Arte 3.12 -->
+                                <h5>Yanomami - Amazonas</h5>
+                                <div class="col s6 m1 l1">
+                               <audio id="audio-arte3-12">
+                                   <source src="audios\Audio indigenas_Rafael_OK\Yanomami_Amazonas_Rafael.wav" type="audio/mpeg">
+                               </audio>
+                               <button class="botao-audio waves-effect" id="play-arte3-12" onclick="playPause('audio-arte3-12', 'play-arte3-12-icone', 'play-arte3-12', 'progresso-arte3-12', '.inicio-arte3-12', '.fim-arte3-12')"><i  class="material-icons" id="play-arte3-12-icone">play_arrow</i></button>                        
+                                </div>
+                               <div class="col s6 m4 l4">
+                                   <div class="duracao">
+                                       <div class="barra">
+                                           <progress value="1" max="1" id="progresso-arte3-12"></progress>
+                                       </div>
+                                       <div class="tempo">
+                                           <p class="inicio-arte3-12">0:00</p>
+                                           <p class="fim-arte3-12">0:00</p>
+                                       </div>
+                                       </div> 
+                                   </div>
+                               </div>
+                    </div>
+
+                    </div>
+                    <div id="test4" class="conteudo-aba">
+                        <div class="row">
+                            <div class="col s6 m6 l6">
+                                <h4>Estética Kitsch: 
+                                </br>A arte de exagerar</h4>
+                                    <div class="botao-arte4 left">  
+                                        <button class="botao waves-effect" id="btn-arte4" onclick="inserirTexto('texto-arte4', 'btn-arte4')"><i  class="material-icons">description</i></button>  
+                                    </div>
+                                </div>
+
+                            <div class="col s6 m6 l6 center">
+                                <img src="imagens/arte-4.png" alt="">
+                            </div>
+                        </div>
+
+                        <div id="texto-arte4" class="texto-aba">
+                            <p>
+                                A estética Kitsch divide opiniões por ser um estilo nada convencional. Existem algumas versões acerca da etimologia da palavra "Kitsch", entre elas que é proveniente do alemão Kitschen / Verkitschen – [vender alguma coisa no lugar de outra], entretanto alguns teóricos afirmam que a expressão deriva da palavra Yverkischen, fazendo alusão à imitação ou inautêntico.  Desta forma, à estética kitsch pode ser entendida como a imitação de um objeto ou obra de arte que perde sua função original.
+                                O termo Kitsch, em alguns contextos, é comumente categorizado como cafona ou brega por possuir caráter de artificialidade, fazendo uso frequentemente de uma paleta de cores composta por tons puros e combinações contrastantes, estampas e texturas extravagantes, distorção nas dimensões dos objetos. Em suma, a presença de uma heterogeneidade nas informações iconográfica e material pictórico em uma única peça, além do forte apelo sentimental e melodramático.
+                                Na produção artística, o Kitsch se destaca de maneira importante nas artes visuais, na arquitetura, no design, no cinema, na fotografia e nos quadrinhos, se popularizando de maneira mais abrangente na publicidade, nas ilustrações e na televisão. É importante frisar que na arte, o termo re-cria significados que anteriormente não existiam na "representação Kitsch", isto é perceptível nas obras do movimento Pop Art com artistas como Andy Warhol que explorou os conceitos de publicidade ao utilizar técnicas e materiais diversos, além das cores fortes.  No Brasil, Nelson Leirner expressa em suas obras, a busca por temáticas populares e objetos do cotidiano como brinquedos e santinhos de gesso com produções carregadas de uma visão crítica do mundo e da sociedade da qual faz parte.
+                                Presente no cotidiano contemporâneo, o Kitsch pode ser compreendido como um fenômeno social introduzindo tendências alicerçado na comunicação e na cultura de massa, possui sim, "intencionalidade" e "direcionamento", gerando conforto e prazer em uma espécie de felicidade a partir da sensação de fuga da realidade através de cenários surreais com aglomerado de elementos ou imitação de uma cultura dita erudita, se apresentando como uma busca por igualdade social. Por fim, parafraseando Abraham Moles (1975), “no fundo todos somos habitados por um pouco de Kitsch.” 
+                            </br></br><strong>Geicy Albuquerque</strong> 
+                            </p>
+                            
+                            <div class="row container audio-arte">
+                                <!-- Audio da Arte 4.1 -->
+                                <h5>Eu Amo Kitsch</h5>
+                                <div class="col s6 m1 l1">
+                               <audio id="audio-arte4-1">
+                                   <source src="audios\Recortes conceituais_Rafael_OK\Eu Amo Kitsch_Rafael.wav" type="audio/mpeg">
+                               </audio>
+                               <button class="botao-audio waves-effect" id="play-arte4-1" onclick="playPause('audio-arte4-1', 'play-arte4-1-icone', 'play-arte4-1', 'progresso-arte4-1', '.inicio-arte4-1', '.fim-arte4-1')"><i  class="material-icons" id="play-arte4-1-icone">play_arrow</i></button>                        
+                                       </div>
+                               <div class="col s6 m4 l4">
+                                   <div class="duracao">
+                                       <div class="barra">
+                                           <progress value="1" max="1" id="progresso-arte4-1"></progress>
+                                       </div>
+                                       <div class="tempo">
+                                           <p class="inicio-arte4-1">0:00</p>
+                                           <p class="fim-arte4-1">0:00</p>
+                                       </div>
+                                       </div> 
+                                   </div>
+                               </div>
+                        </div>
+                    </div>
+                </div>
+          
+               
+    </section> <!-- /Exposição -->
+
+    <section id="estrutura"> <!-- Mais Informações -->
+        <div class="container"> 
+        <div class="row">
+            <h5 class="titulo-exp">Mais Informações</h5>
+            <div class="col s12">
+                <div class="tab-2">
+                    <button class="tablinks waves-effect" onclick="openCity(event, 'London')">Outras Informações</button>
+                  </div>
+                  
+                  <div id="London" class="tabcontent">
+                    <div class="botao-outras-info">  
+                        <button class="botao waves-effect" id="btn-outras-info" onclick="inserirTexto('texto-outras-info', 'btn-outras-info')"><i  class="material-icons">description</i></button>
+                    </div>
+                    <div id="texto-outras-info" class="texto-aba">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit fugit obcaecati soluta corporis, quia dolor? Repudiandae, exercitationem? Suscipit perferendis culpa natus consequuntur commodi? In nemo consequatur alias voluptatum libero inventore?
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit fugit obcaecati soluta corporis, quia dolor? Repudiandae, exercitationem? Suscipit perferendis culpa natus consequuntur commodi? In nemo consequatur alias voluptatum libero inventore?
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit fugit obcaecati soluta corporis, quia dolor? Repudiandae, exercitationem? Suscipit perferendis culpa natus consequuntur commodi? In nemo consequatur alias voluptatum libero inventore?
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit fugit obcaecati soluta corporis, quia dolor? Repudiandae, exercitationem? Suscipit perferendis culpa natus consequuntur commodi? In nemo consequatur alias voluptatum libero inventore?
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit fugit obcaecati soluta corporis, quia dolor? Repudiandae, exercitationem? Suscipit perferendis culpa natus consequuntur commodi? In nemo consequatur alias voluptatum libero inventore?
+                        </p>
+                        
+                        <div class="row container audio-outras-info">
+                            <h4>Obras religiosas</h4>
+                            <!-- Audio da Arte 5.1 -->
+                            <h5>Arte Sacra</h5>
+                            <div class="col s6 m1 l1">
+                           <audio id="audio-arte5-1">
+                               <source src="audios\Outras Informações\Obras religiosas\Arte Sacra_Rafael.wav" type="audio/mpeg">
+                           </audio>
+                           <button class="botao-audio waves-effect" id="play-arte5-1" onclick="playPause('audio-arte5-1', 'play-arte5-1-icone', 'play-arte5-1', 'progresso-arte5-1', '.inicio-arte5-1', '.fim-arte5-1')"><i  class="material-icons" id="play-arte5-1-icone">play_arrow</i></button>                        
+                                   </div>
+                           <div class="col s6 m4 l4">
+                               <div class="duracao">
+                                   <div class="barra">
+                                       <progress value="1" max="1" id="progresso-arte5-1"></progress>
+                                   </div>
+                                   <div class="tempo">
+                                       <p class="inicio-arte5-1">0:00</p>
+                                       <p class="fim-arte5-1">0:00</p>
+                                   </div>
+                                   </div> 
+                               </div>
+                           </div>
+
+                           <div class="row container audio-outras-info">
+                            <!-- Audio da Arte 5.2 -->
+                            <h4>Principais Cidades</h4>
+                            <div class="col s6 m1 l1">
+                           <audio id="audio-arte5-2">
+                               <source src="audios\Outras Informações\Cidades PE_Rafael_OK\Principais Cidades_Rafael.wav" type="audio/mpeg">
+                           </audio>
+                           <button class="botao-audio waves-effect" id="play-arte5-2" onclick="playPause('audio-arte5-2', 'play-arte5-2-icone', 'play-arte5-2', 'progresso-arte5-2', '.inicio-arte5-2', '.fim-arte5-2')"><i  class="material-icons" id="play-arte5-2-icone">play_arrow</i></button>                        
+                                   </div>
+                           <div class="col s6 m4 l4">
+                               <div class="duracao">
+                                   <div class="barra">
+                                       <progress value="1" max="1" id="progresso-arte5-2"></progress>
+                                   </div>
+                                   <div class="tempo">
+                                       <p class="inicio-arte5-2">0:00</p>
+                                       <p class="fim-arte5-2">0:00</p>
+                                   </div>
+                                   </div> 
+                               </div>
+                           </div>
+
+                           <div class="row container audio-outras-info">
+                            <!-- Audio da Arte 5.3 -->
+                            <h5>Arcoverde</h5>
+                            <div class="col s6 m1 l1">
+                           <audio id="audio-arte5-3">
+                               <source src="audios\Outras Informações\Cidades PE_Rafael_OK\Arcoverde_Rafael.wav" type="audio/mpeg">
+                           </audio>
+                           <button class="botao-audio waves-effect" id="play-arte5-3" onclick="playPause('audio-arte5-3', 'play-arte5-3-icone', 'play-arte5-3', 'progresso-arte5-3', '.inicio-arte5-3', '.fim-arte5-3')"><i  class="material-icons" id="play-arte5-3-icone">play_arrow</i></button>                        
+                                   </div>
+                           <div class="col s6 m4 l4">
+                               <div class="duracao">
+                                   <div class="barra">
+                                       <progress value="1" max="1" id="progresso-arte5-3"></progress>
+                                   </div>
+                                   <div class="tempo">
+                                       <p class="inicio-arte5-3">0:00</p>
+                                       <p class="fim-arte5-3">0:00</p>
+                                   </div>
+                                   </div> 
+                               </div>
+                           </div>
+
+                           <div class="row container audio-outras-info">
+                            <!-- Audio da Arte 5.4 -->
+                            <h5>Bezerros</h5>
+                            <div class="col s6 m1 l1">
+                           <audio id="audio-arte5-4">
+                               <source src="audios\Outras Informações\Cidades PE_Rafael_OK\Bezerros_Rafael.wav" type="audio/mpeg">
+                           </audio>
+                           <button class="botao-audio waves-effect" id="play-arte5-4" onclick="playPause('audio-arte5-4', 'play-arte5-4-icone', 'play-arte5-4', 'progresso-arte5-4', '.inicio-arte5-4', '.fim-arte5-4')"><i  class="material-icons" id="play-arte5-4-icone">play_arrow</i></button>                        
+                                   </div>
+                           <div class="col s6 m4 l4">
+                               <div class="duracao">
+                                   <div class="barra">
+                                       <progress value="1" max="1" id="progresso-arte5-4"></progress>
+                                   </div>
+                                   <div class="tempo">
+                                       <p class="inicio-arte5-4">0:00</p>
+                                       <p class="fim-arte5-4">0:00</p>
+                                   </div>
+                                   </div> 
+                               </div>
+                           </div>
+
+                           <div class="row container audio-outras-info">
+                            <!-- Audio da Arte 5.5 -->
+                            <h5>Caruaru</h5>
+                            <div class="col s6 m1 l1">
+                           <audio id="audio-arte5-5">
+                               <source src="audios\Outras Informações\Cidades PE_Rafael_OK\Caruaru-01_Rafael.wav" type="audio/mpeg">
+                           </audio>
+                           <button class="botao-audio waves-effect" id="play-arte5-5" onclick="playPause('audio-arte5-5', 'play-arte5-5-icone', 'play-arte5-5', 'progresso-arte5-5', '.inicio-arte5-5', '.fim-arte5-5')"><i  class="material-icons" id="play-arte5-5-icone">play_arrow</i></button>                        
+                                   </div>
+                           <div class="col s6 m4 l4">
+                               <div class="duracao">
+                                   <div class="barra">
+                                       <progress value="1" max="1" id="progresso-arte5-5"></progress>
+                                   </div>
+                                   <div class="tempo">
+                                       <p class="inicio-arte5-5">0:00</p>
+                                       <p class="fim-arte5-5">0:00</p>
+                                   </div>
+                                   </div> 
+                               </div>
+                           </div>
+
+                           <div class="row container audio-outras-info">
+                            <!-- Audio da Arte 5.6 -->
+                            <h5>Garanhuns</h5>
+                            <div class="col s6 m1 l1">
+                           <audio id="audio-arte5-6">
+                               <source src="audios\Outras Informações\Cidades PE_Rafael_OK\Garanhuns_Rafael.wav" type="audio/mpeg">
+                           </audio>
+                           <button class="botao-audio waves-effect" id="play-arte5-6" onclick="playPause('audio-arte5-6', 'play-arte5-6-icone', 'play-arte5-6', 'progresso-arte5-6', '.inicio-arte5-6', '.fim-arte5-6')"><i  class="material-icons" id="play-arte5-6-icone">play_arrow</i></button>                        
+                                   </div>
+                           <div class="col s6 m4 l4">
+                               <div class="duracao">
+                                   <div class="barra">
+                                       <progress value="1" max="1" id="progresso-arte5-6"></progress>
+                                   </div>
+                                   <div class="tempo">
+                                       <p class="inicio-arte5-6">0:00</p>
+                                       <p class="fim-arte5-6">0:00</p>
+                                   </div>
+                                   </div> 
+                               </div>
+                           </div>
+
+                           <div class="row container audio-outras-info">
+                            <!-- Audio da Arte 5.7 -->
+                            <h5>Goiana</h5>
+                            <div class="col s6 m1 l1">
+                           <audio id="audio-arte5-7">
+                               <source src="audios\Outras Informações\Cidades PE_Rafael_OK\Goiana_Rafael.wav" type="audio/mpeg">
+                           </audio>
+                           <button class="botao-audio waves-effect" id="play-arte5-7" onclick="playPause('audio-arte5-7', 'play-arte5-7-icone', 'play-arte5-7', 'progresso-arte5-7', '.inicio-arte5-7', '.fim-arte5-7')"><i  class="material-icons" id="play-arte5-7-icone">play_arrow</i></button>                        
+                                   </div>
+                           <div class="col s6 m4 l4">
+                               <div class="duracao">
+                                   <div class="barra">
+                                       <progress value="1" max="1" id="progresso-arte5-7"></progress>
+                                   </div>
+                                   <div class="tempo">
+                                       <p class="inicio-arte5-7">0:00</p>
+                                       <p class="fim-arte5-7">0:00</p>
+                                   </div>
+                                   </div> 
+                               </div>
+                           </div>
+
+                           <div class="row container audio-outras-info">
+                            <!-- Audio da Arte 5.8 -->
+                            <h5>Gravata</h5>
+                            <div class="col s6 m1 l1">
+                           <audio id="audio-arte5-8">
+                               <source src="audios\Outras Informações\Cidades PE_Rafael_OK\Gravata-01 Rafael.wav" type="audio/mpeg">
+                           </audio>
+                           <button class="botao-audio waves-effect" id="play-arte5-8" onclick="playPause('audio-arte5-8', 'play-arte5-8-icone', 'play-arte5-8', 'progresso-arte5-8', '.inicio-arte5-8', '.fim-arte5-8')"><i  class="material-icons" id="play-arte5-8-icone">play_arrow</i></button>                        
+                                   </div>
+                           <div class="col s6 m4 l4">
+                               <div class="duracao">
+                                   <div class="barra">
+                                       <progress value="1" max="1" id="progresso-arte5-8"></progress>
+                                   </div>
+                                   <div class="tempo">
+                                       <p class="inicio-arte5-8">0:00</p>
+                                       <p class="fim-arte5-8">0:00</p>
+                                   </div>
+                                   </div> 
+                               </div>
+                           </div>
+
+                           <div class="row container audio-outras-info">
+                            <!-- Audio da Arte 5.9 -->
+                            <h5>Ibimirim</h5>
+                            <div class="col s6 m1 l1">
+                           <audio id="audio-arte5-9">
+                               <source src="audios\Outras Informações\Cidades PE_Rafael_OK\Ibimirim_Rafael.wav" type="audio/mpeg">
+                           </audio>
+                           <button class="botao-audio waves-effect" id="play-arte5-9" onclick="playPause('audio-arte5-9', 'play-arte5-9-icone', 'play-arte5-9', 'progresso-arte5-9', '.inicio-arte5-9', '.fim-arte5-9')"><i  class="material-icons" id="play-arte5-9-icone">play_arrow</i></button>                        
+                                   </div>
+                           <div class="col s6 m4 l4">
+                               <div class="duracao">
+                                   <div class="barra">
+                                       <progress value="1" max="1" id="progresso-arte5-9"></progress>
+                                   </div>
+                                   <div class="tempo">
+                                       <p class="inicio-arte5-9">0:00</p>
+                                       <p class="fim-arte5-9">0:00</p>
+                                   </div>
+                                   </div> 
+                               </div>
+                           </div>
+
+                           <div class="row container audio-outras-info">
+                            <!-- Audio da Arte 5.10 -->
+                            <h5>Petrolina</h5>
+                            <div class="col s6 m1 l1">
+                           <audio id="audio-arte5-10">
+                               <source src="audios\Outras Informações\Cidades PE_Rafael_OK\Petrolina_Rafael.wav" type="audio/mpeg">
+                           </audio>
+                           <button class="botao-audio waves-effect" id="play-arte5-10" onclick="playPause('audio-arte5-10', 'play-arte5-10-icone', 'play-arte5-10', 'progresso-arte5-10', '.inicio-arte5-10', '.fim-arte5-10')"><i  class="material-icons" id="play-arte5-10-icone">play_arrow</i></button>                        
+                                   </div>
+                           <div class="col s6 m4 l4">
+                               <div class="duracao">
+                                   <div class="barra">
+                                       <progress value="1" max="1" id="progresso-arte5-10"></progress>
+                                   </div>
+                                   <div class="tempo">
+                                       <p class="inicio-arte5-10">0:00</p>
+                                       <p class="fim-arte5-10">0:00</p>
+                                   </div>
+                                   </div> 
+                               </div>
+                           </div>
+
+                           <div class="row container audio-outras-info">
+                            <!-- Audio da Arte 5.11 -->
+                            <h5>Tracunhaem</h5>
+                            <div class="col s6 m1 l1">
+                           <audio id="audio-arte5-11">
+                               <source src="audios\Outras Informações\Cidades PE_Rafael_OK\Tracunhaem_Rafael.wav" type="audio/mpeg">
+                           </audio>
+                           <button class="botao-audio waves-effect" id="play-arte5-11" onclick="playPause('audio-arte5-11', 'play-arte5-11-icone', 'play-arte5-11', 'progresso-arte5-11', '.inicio-arte5-11', '.fim-arte5-11')"><i  class="material-icons" id="play-arte5-11-icone">play_arrow</i></button>                        
+                                   </div>
+                           <div class="col s6 m4 l4">
+                               <div class="duracao">
+                                   <div class="barra">
+                                       <progress value="1" max="1" id="progresso-arte5-11"></progress>
+                                   </div>
+                                   <div class="tempo">
+                                       <p class="inicio-arte5-11">0:00</p>
+                                       <p class="fim-arte5-11">0:00</p>
+                                   </div>
+                                   </div> 
+                               </div>
+                           </div>
+                        
+                    </div>
+
+
+
+                  </div>
+                  
+            </div>
+
+        </div> 
+    </div>
+    </section> <!-- /Mais Informações -->
+
+
+<footer class="page-footer">
+</footer>
+                       
+<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+    <script src=""></script>
+</body>
+</html>

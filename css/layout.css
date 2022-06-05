@@ -1,0 +1,423 @@
+@charset: "utf-8";
+
+/* 
+formatacao do projeto cursos.
+*/
+
+:root{
+    --cor-padrao: #072E84;
+    --azul-claro: #ECF6FF;
+    --cor-menu: #ffffff;
+}
+
+strong{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+section#top{
+	background-color: #679F50;
+    height: 33em;
+    width: 100%;
+    
+}
+
+.page-footer{
+    padding-top: 90px;
+    margin-top: 110px;
+    background-color: var(--cor-padrao);
+}
+
+.nav-padrao{
+	background-color: var(--cor-menu);
+	height: 4.5em;
+    padding: 5px 0px 0px 0px;
+    
+}
+
+.nav-padrao button{
+	padding: 12px 40px 12px 40px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    background-color: var(--azul-claro);
+    color: var(--cor-padrao);
+    margin-top: -10px;
+    
+}
+
+.nav-padrao button:hover{
+    background-color: var(--azul-claro);
+    color: var(--cor-padrao);
+    
+}
+
+
+nav .brand-logo{
+    margin-left: -25px;
+}
+
+
+div#info{
+	color: #ffffff;
+    
+}
+
+div#info h2 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 44px;
+    margin: 100px 0px 0px -20px;
+    
+}
+
+div#info #foto-fachada{
+    margin: -20px 0px 0px 80px;
+    width: 593px;
+    height: 500px;
+    
+    
+}
+
+div#info .botao-apresentacao {
+    margin: 25px 0px 0px -20px;
+}
+
+div#texto-apresentacao{
+    margin-top: 110px;
+    display: none;
+    
+}
+
+/* class */
+
+.logo{
+	width: 90%; height: 90%;
+    padding-left: 20px;
+}
+
+.botao{
+    border-radius: 100px;
+    border: none;
+    padding: 20px;
+    background-color: #004586;
+    color: #ffffff;
+    cursor: pointer;
+    margin-right: 10px;
+    
+}
+
+.botao-audio{
+    border-radius: 100px;
+    border: none;
+    margin-left: -15px;
+    padding: 16px;
+    background-color: #004586;
+    color: #ffffff;
+    cursor: pointer;
+    
+}
+
+.botao:hover{
+    background-color: #004586;
+    cursor: pointer;
+}
+
+.botao i{
+    font-size: 2.5rem;
+}
+
+.botao-audio i{
+    font-size: 2.5rem;
+}
+
+.texto1 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24.2px;
+    margin-bottom: 40px;
+}
+
+.imagem-apresentacao{
+    float: left;
+    margin: 0px 55px 10px 0px;
+}
+div#texto-arte1{
+    display: none;
+    width: 95%;
+}
+div#texto-arte2{
+    display: none;
+    width: 95%;
+}
+div#texto-arte3{
+    display: none;
+    width: 95%;
+}
+div#texto-arte4{
+    display: none;
+    width: 95%;
+}
+
+.texto-aba p{
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 24.2px;
+    margin: 40px 40px 40px 40px;
+}
+
+
+.texto-aba{
+    background-color: #F3F9FF;
+    border-radius: 0px 74px 74px 74px;
+    padding: 5px 0px 40px 0px;
+}
+
+div#exp {
+    margin: 0px 0px 0px 50px;
+}
+
+h4, h5 {
+    font-family: 'Inter';
+    font-style: normal;
+    color: #000000;
+    }
+
+h4 {
+font-weight: 800;
+font-size: 36px;
+line-height: 44px;
+color: #000000;
+}
+
+h5 {
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 44px;
+    color: #000000;
+    }
+
+.titulo-exp{
+    font-size: 30px;
+    color: var(--cor-padrao);
+    margin-bottom: 30px;
+}
+
+section#exposicao .titulo-exp{
+    margin-left: 10px;
+}
+
+section#estrutura .titulo-exp{
+    margin-left: 10px;
+}
+
+section#estrutura{
+    padding-top: 110px;
+}
+
+#texto-outras-info{
+    display: none;
+    margin-top: 40px;
+}
+
+p {
+    font-family: 'Inter';
+    font-style: normal;
+    color: #000000;
+}
+
+.content{
+    margin-top: 60px;
+}
+
+.duracao{
+    width: 300px;
+    margin: 10px 0px 0px 10px;
+    
+    
+    
+}
+.barra{
+    width: 300px;
+    height: 20px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    
+    
+}
+progress{
+    height: 20px;
+    width: 0%;
+    -webkit-appearance: none;
+    border-radius: 5px;
+}
+
+progress::-webkit-progress-value {
+    border-radius: 5px;
+    background:#004586;
+}
+
+progress::-webkit-progress-bar {
+    background:#004586;
+    border-radius: 5px;
+}
+progress::-moz-progress-bar {  
+    background:#004586;
+    border-radius: 5px;
+}
+
+.ponto{
+    width: 20px;
+    height: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+    margin-left: -10px;
+}
+
+.tempo {
+    display: flex;
+    width: 530px;
+    justify-content: space-between;
+}
+
+.tempo p{
+    width: 300px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: normal;
+    color: #000000;
+    margin: 0px;
+    padding: 0px;
+}
+
+.audio-outras-info{
+    margin-left: 45px!important;
+    margin-top: 70px;
+}
+
+.audio-outras-info h4{
+    font-size: 30px;
+}
+
+
+.exposicao {
+    height: 143px;
+  }
+
+  ul.tabs{
+    width: 865px!important;
+    height: 185px;
+    
+  }
+
+  ul.tabs li.tab {
+    width: 152px!important;
+    height: 185px!important;
+    color: blue;
+
+  }
+
+  .tabs li a{
+    width: 185px!important;
+    background-repeat: no-repeat;
+    background-size: 165.77px 165.77px;
+    background-color: #E5E5E5;
+    background-position: center;
+   
+  }
+
+  .tabs li:nth-child(1) a{
+    background-image: url("../icones/icone-exp1.png"); 
+  }
+
+  .tabs li:nth-child(2) a{
+    background-image: url("../icones/icone-exp2.png"); 
+  }
+
+  .tabs li:nth-child(3) a{
+    background-image: url("../icones/icone-exp3.png"); 
+  }
+
+  .tabs li:nth-child(4) a{
+    background-image: url("../icones/icone-exp4.png"); 
+  }
+
+  
+  .tabs.tab a{
+    width: 185px!important;    
+    
+  }
+ 
+  .tabs .tab a:focus, .tabs .tab a:focus.active{
+    color: #BAB7CC;
+    background-color: transparent;
+    
+  }
+
+  .tabs .indicator{
+      background-color: #679F50;
+      z-index: 5;
+  }
+
+  .tab a.active{
+    background-color: #B6D8F9!important    ;
+  }
+  
+ .conteudo-aba {
+    margin-top: 80px;
+  }
+
+  .botao-arte1 {
+      margin-top: 35px;
+  }
+  /* Style the tab */
+.tab-2 {
+    overflow: hidden;
+    border: none;
+    background-color: var(--azul-claro);;
+    width: 280px;
+    margin-bottom: 10px;
+  }
+  
+  /* Style the buttons inside the tab */
+  .tab-2 button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 20px;
+    transition: 0.3s;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab-2 button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab-2 button.active {
+    background-color: #F8F8F8;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: none;
+    border-top: none;
+  }
+  
+  .access-button{
+      width: 60%!important;
+  }
