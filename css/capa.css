@@ -3,6 +3,11 @@
     --azul-claro: #ECF6FF;
 }
 
+.nav-padrao{
+    padding: 33px 0px 0px 0px!important;
+    height: 7em!important;
+}
+
 section#topo{
     background-image: url('../imagens/bg-capa.png');
     background-repeat: no-repeat;
@@ -43,7 +48,14 @@ section#topo{
 }
 
 @media (max-width: 800px){
-    .titulo h1{
+    .titulo-capa h1{
         font-size: 50px;
+    }
+    .titulo-capa{
+        padding-left: 20%;
+    }
+    .section#topo{
+        background-repeat: repeat;
+        height: 1280px;
     }
 }
