@@ -30,19 +30,20 @@ section#top{
 
 .nav-padrao{
 	background-color: var(--cor-menu);
-	height: 4.5em;
-    padding: 5px 0px 0px 0px;
+	height: 6em;
+    padding: 15px 0px 0px 0px;
     
 }
 
 .nav-padrao button{
-	padding: 12px 40px 12px 40px;
+	padding: 22px 14px 22px 14px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 800;
-    background-color: var(--azul-claro);
+    background-color: var(--cor-padrao);
     color: var(--cor-padrao);
     margin-top: -10px;
+    margin-right: 50px;
     
 }
 

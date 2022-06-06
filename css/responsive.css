@@ -1,10 +1,21 @@
-@media (min-width: 1360px){
+@media (min-width: 1355px){
+
+    ul.tabs li.tab{
+        width: 210px!important;
+    }
+    ul.tabs {
+        width: 864px!important;
+    }
     .container{
         width: 80%;
     }
 
+    div#info h2 {
+        font-size: 48px;
+    }
+
     #btn-descricao{
-        margin-top: 100px;
+        margin-top: 35px;
         padding: 25px;
     }
     
@@ -14,7 +25,7 @@
     
  }
 
-@media (min-width: 1280px) and (max-width: 1359px) {
+@media (min-width: 1280px) and (max-width: 1354px) {
 
     ul.tabs li.tab{
         width: 251px!important;
@@ -31,7 +42,7 @@
     }
 
     #btn-descricao{
-        margin-top: 12px;
+        margin-top: -10px;
         padding: 25px;
     }
     
@@ -67,10 +78,26 @@
  @media (min-width: 800px) and (max-width: 900px) {
 
     ul.tabs li.tab{
-        width: 251px!important;
+        width: 180px!important;
     }
     ul.tabs {
-        width: 700px!important;
+        width: 741px!important;
+    }
+
+    #btn-descricao{
+        margin-top: 15px;
+        padding: 25px;
+    }
+
+    div#info h2 {
+        font-size: 30px;
+    }
+
+    h4{
+        font-size: 30px;
+    }
+    .duracao{
+        margin: 10px 0px 0px 30px;
     }
 
     
