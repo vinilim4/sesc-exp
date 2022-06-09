@@ -11,16 +11,21 @@
     }
 
     div#info h2 {
-        font-size: 48px;
+        font-size: 45px;
     }
 
     #btn-descricao{
-        margin-top: 35px;
+        margin-top: -5px;
         padding: 25px;
     }
     
     #btn-descricao i{
         font-size: 3rem;
+    }
+
+    div#info h2 {
+        font-size: 45px;
+        line-height: 55px;
     }
     
  }
@@ -42,7 +47,7 @@
     }
 
     #btn-descricao{
-        margin-top: -10px;
+        margin-top: 35px;
         padding: 25px;
     }
     
@@ -60,6 +65,19 @@
     ul.tabs {
         width: 810px!important;
     }
+
+    #btn-descricao{
+        margin-top: 35px;
+        padding: 25px;
+    }
+    
+    #btn-descricao i{
+        font-size: 3rem;
+    }
+
+    div#info h2 {
+        font-size: 40px;
+    }
     
  }
  
@@ -72,6 +90,14 @@
         width: 800px!important;
     }
 
+    #btn-descricao{
+        margin-top: 10px;
+        padding: 25px;
+    }
+    
+    #btn-descricao i{
+        font-size: 3rem;
+    }
     
  }
 
@@ -85,12 +111,12 @@
     }
 
     #btn-descricao{
-        margin-top: 15px;
+        margin-top: 14px;
         padding: 25px;
     }
 
     div#info h2 {
-        font-size: 30px;
+        font-size: 35px;
     }
 
     h4{

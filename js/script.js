@@ -23,6 +23,19 @@ $('.icone').click(function() {
 
 var count = 0;
 
+//Pega todas as tags de audio
+const audioPlay = document.querySelectorAll('audio');
+
+function pausarTodos(){
+  for (i = 0; i < audioPlay.length; i++) {
+  audioPlay[i].pause();
+  audioPlay[i].currentTime = 0;
+  audioPlay[i].nextElementSibling.style.backgroundColor = '#004586';
+  audioPlay[i].nextElementSibling.style.color = '#ffffff';
+  audioPlay[i].nextElementSibling.firstChild.innerHTML = "play_arrow";
+  }
+}
+
 function playPause(audio, icone, botaoPlay, barra, inicio, fim) {
     var audio = document.getElementById(audio);
     var icone = document.getElementById(icone);
@@ -55,21 +68,23 @@ function playPause(audio, icone, botaoPlay, barra, inicio, fim) {
         return campoMinutos + ':' + campoSegundos;
     }
 
-    if(count == 0) {
-        count = 1;
+    if(audio.currentTime === 0) {
+        pausarTodos()
         audio.play();
         icone.innerHTML = "stop"
         botao.style.backgroundColor = '#E5E5E5'
         botao.style.color = '#004586'
         audio.addEventListener('timeupdate', atualizarBarra)
+        
+        
     } else{
-        count = 0;
         audio.pause();
         audio.currentTime = 0;
         icone.innerHTML = "play_arrow"
         botao.style.backgroundColor = '#004586'
         botao.style.color = '#ffffff'
     }
+    
 }
 
 function playPauseSemBarra(audio, icone, botaoPlay) {
@@ -77,14 +92,13 @@ function playPauseSemBarra(audio, icone, botaoPlay) {
     var icone1 = document.getElementById(icone);
     var botao1 = document.getElementById(botaoPlay);
 
-    if(count == 0) {
-        count = 1;
+    if(audio1.currentTime === 0) {
+        pausarTodos();
         audio1.play();
         icone1.innerHTML = "stop"
         botao1.style.backgroundColor = '#E5E5E5'
         botao1.style.color = '#004586'
     } else{
-        count = 0;
         audio1.pause();
         audio1.currentTime = 0;
         icone1.innerHTML = "play_arrow"
@@ -203,3 +217,5 @@ function openCity(evt, cityName) {
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
 }
+
+

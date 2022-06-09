@@ -206,6 +206,10 @@ h5 {
     margin-bottom: 30px;
 }
 
+section#exposicao{
+    padding-top: 150px;
+}
+
 section#exposicao .titulo-exp{
     margin-left: 10px;
 }
