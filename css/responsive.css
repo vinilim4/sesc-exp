@@ -15,7 +15,7 @@
     }
 
     #btn-descricao{
-        margin-top: -5px;
+        margin-top: 45px;
         padding: 25px;
     }
     
@@ -125,6 +125,12 @@
     .duracao{
         margin: 10px 0px 0px 30px;
     }
+
+    
+ }
+
+ @media (max-width: 799px) {
+    
 
     
  }

@@ -1,5 +1,5 @@
 M.AutoInit();
-
+console.log("Desenvolvido por Fluido Criativo: Fernanda Paixão, Vinicius Lima")
 /*$(document).ready(function(){
     $('.tabs').tabs({swipeable: true, responsiveThreshold: "800px"});
     

@@ -164,7 +164,7 @@ div#texto-arte4{
 
 .texto-aba p{
     font-weight: 600;
-    font-size: 17px;
+    font-size: 20px;
     line-height: 24.2px;
     margin: 40px 40px 40px 40px;
 }
@@ -384,8 +384,7 @@ progress::-moz-progress-bar {
 .tab-2 {
     overflow: hidden;
     border: none;
-    background-color: var(--azul-claro);;
-    width: 280px;
+    width: 500px;
     margin-bottom: 10px;
   }
   
@@ -402,7 +401,8 @@ progress::-moz-progress-bar {
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
-    
+    background-color: var(--azul-claro);
+    margin-right: 10px;
   }
   
   /* Change background color of buttons on hover */
