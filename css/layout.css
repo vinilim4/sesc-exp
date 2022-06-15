@@ -87,7 +87,7 @@ div#info .botao-apresentacao {
 }
 
 div#texto-apresentacao{
-    margin-top: 110px;
+    margin-top: 140px;
     display: none;
     
 }
@@ -375,6 +375,12 @@ progress::-moz-progress-bar {
   
  .conteudo-aba {
     margin-top: 80px;
+  }
+
+  .conteudo-aba img{
+    width: 331px;
+    height: 271px;
+    margin-left: 20%;
   }
 
   .botao-arte1 {
